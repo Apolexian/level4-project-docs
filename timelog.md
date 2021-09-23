@@ -17,7 +17,12 @@
 ### 22 Sep 2021
 
 * *0.5 hours* Setup docs git repo
-* *0.5 hour* Went through moodle and guidance for the project
-* *0.5 hour* Setup zotero
+* *0.5 hours* Went through moodle and guidance for the project
+* *0.5 hours* Setup zotero
 * *2 hours* Identified initial set of papers to read using two previously identified papers and https://www.connectedpapers.com/
-* *1 hour* Read [A First Look at QUIC in the Wild](https://link.springer.com/chapter/10.1007%2F978-3-319-76481-8_19) 
+* *1 hours* Read [A First Look at QUIC in the Wild](https://link.springer.com/chapter/10.1007%2F978-3-319-76481-8_19)
+
+### 23 Sep 2021
+
+* *2 hours* Read [Towards Securing the Internet of Things with QUIC](https://easychair.org/publications/preprint/68D2)
+* *3 hours* Read [Implementation and Analysis of QUIC for MQTT](http://arxiv.org/abs/1810.07730)
