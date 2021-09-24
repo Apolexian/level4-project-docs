@@ -26,3 +26,7 @@
 
 * *2 hours* Read [Towards Securing the Internet of Things with QUIC](https://easychair.org/publications/preprint/68D2)
 * *3 hours* Read [Implementation and Analysis of QUIC for MQTT](http://arxiv.org/abs/1810.07730)
+
+### 24 Sep 2021
+
+* *2 hours* Wrote initial project plan with outline of goals and deliverables week by week
