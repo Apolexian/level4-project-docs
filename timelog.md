@@ -30,3 +30,7 @@
 ### 24 Sep 2021
 
 * *2 hours* Wrote initial project plan with outline of goals and deliverables week by week
+
+### 25 Sept 2021
+
+* *0.5 hours* Setting up empty git repos for dissertation and quic implementation (added as submodules to this repo)
