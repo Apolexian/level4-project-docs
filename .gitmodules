@@ -1,0 +1,6 @@
+[submodule "quartz"]
+	path = quartz
+	url = git@github.com:Apolexian/quartz.git
+[submodule "level-four-dissertation"]
+	path = level-four-dissertation
+	url = git@github.com:Apolexian/level-four-dissertation.git
