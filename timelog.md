@@ -34,3 +34,10 @@
 ### 25 Sept 2021
 
 * *0.5 hours* Setting up empty git repos for dissertation and quic implementation (added as submodules to this repo)
+
+## Week 2
+
+### 30 Sept 2021
+
+* *0.5 hours* Meeting with supervisor
+* *0.5 hours* Aggregating meeting notes
