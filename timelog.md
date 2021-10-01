@@ -37,7 +37,11 @@
 
 ## Week 2
 
-### 30 Sept 2021
+### 30 Sep 2021
 
 * *0.5 hours* Meeting with supervisor
 * *0.5 hours* Aggregating meeting notes
+
+### 1 Oct 2021
+
+* *1 hours* Read [Attack scenarios and security analysis of MQTT communication protocol in IoT systems](https://www.researchgate.net/publication/322059897_Attack_scenarios_and_security_analysis_of_MQTT_communication_protocol_in_IoT_system)
