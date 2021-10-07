@@ -33,14 +33,14 @@
 
 ### 25 Sept 2021
 
-* *0.5 hours* Setting up empty git repos for dissertation and quic implementation (added as submodules to this repo)
+* *0.5 hours* Set up empty git repos for dissertation and quic implementation (added as submodules to this repo)
 
 ## Week 2
 
 ### 30 Sep 2021
 
 * *0.5 hours* Meeting with supervisor
-* *0.5 hours* Aggregating meeting notes
+* *0.5 hours* Aggregated meeting notes
 
 ### 1 Oct 2021
 
@@ -65,7 +65,14 @@
 
 ### 5 Oct 2021
 
-* *2 hours* Formalise ideas from background reading and establish objectives for project
+* *2 hours* Formalised ideas from background reading and establish objectives for project
 * *1 hours* Skim code for [quiche](https://github.com/cloudflare/quiche) and [mqtt-broker](https://github.com/bschwind/mqtt-broker)
 * *0.5 hours* Read through [tokio TcpStream docs](https://docs.rs/tokio/0.2.22/tokio/net/struct.TcpStream.html)
 * *0.5 hours* Look through previous meeting notes and prepare for next meeting
+
+### 6 Oct 2021
+
+* *0.5 hours* Finished prep for the meeting
+* *0.5 hours* Supervisor meeting
+* *2 hours* Created [Prioritisation of ideas for the project using MoSCoW](./plan.md)
+* *1 hours* Created [Rough timeline for project](./plan.md)

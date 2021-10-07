@@ -38,3 +38,55 @@
   * Setting up a mesh network test bench would take away too much time from the timeline of the project
 
 ## Timeline
+
+### Semester 1
+
+Week 3:
+
+* Finalise plan and prioritisation
+* Run quiche and mqtt as is on local
+
+Week 4:
+
+* Understand mqtt implementation and identify where tcp has to be replcaed
+* Compare APIs of quiche and tokio::net::TcpStream to understand what changes to interfaces will need to be made
+
+Week 5-8:
+
+* Port mqtt to quic
+* Make sure it runs on local
+
+Week 9-10:
+
+* Set up test bench on devices/mininet
+* Set up other implementations that port will be compared to
+* Create scripts for data collection during evaluation and testing
+
+Week 11-13:
+
+* Run the port on test benches to make sure everything works
+* Evaluate performance to get the basline measurements for the port
+* Recreate data integrity attack from `Attack scenarios and security analysis of MQTT communication protocol in IoT systems - Syaiful Andy (2017)` on test bench
+* Evaluate resilience of port against recreated data integrity attack
+* Work on status report
+
+### Semester 2
+
+Week 1-3:
+
+* Thin down client
+* Evaluate overhead and feature fullness of TLS vs KP-ABE
+* Re-evaluate final thinned down version versus other implementations (mqtt in c, `Puneet Kumar (2019)`, original port)
+
+Week 4-6:
+
+* Attempt to port quic implementation to use KP-ABE
+* Evaluation of resulting solution in terms of overhead
+
+Week 7-9:
+
+* Work on first draft of dissertation
+
+Week 10-11:
+
+* Work on feedback for dissertation and submission
