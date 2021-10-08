@@ -76,3 +76,10 @@
 * *0.5 hours* Supervisor meeting
 * *2 hours* Created [Prioritisation of ideas for the project using MoSCoW](./plan.md)
 * *1 hours* Created [Rough timeline for project](./plan.md)
+
+### 8 Oct 2021
+
+* *1 hours* Went through [mininet walkthrough](http://mininet.org/walkthrough/) and ran simple http server on a basic topology
+* *0.5 hours* Look through vagrant docs and install it
+* *1 hours* Set up vagrantfile
+* *2 hours* Tried to run the quiche example using simple mininet two host topology but encountering errors: network is unreachable and failed to process packet: -10

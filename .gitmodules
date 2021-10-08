@@ -1,3 +1,6 @@
 [submodule "level-four-dissertation"]
 	path = level-four-dissertation
 	url = git@github.com:Apolexian/level-four-dissertation.git
+[submodule "level4-scripts"]
+	path = level4-scripts
+	url = git@github.com:Apolexian/level4-scripts.git
