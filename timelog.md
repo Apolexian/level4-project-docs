@@ -83,3 +83,7 @@
 * *0.5 hours* Look through vagrant docs and install it
 * *1 hours* Set up vagrantfile
 * *2 hours* Tried to run the quiche example using simple mininet two host topology but encountering errors: network is unreachable and failed to process packet: -10
+
+### 9 Oct 2021
+
+* *3 hours* Fixed bugs in mininet script, updated mininet to use python3, set up script to use threads to connect 3 clients in parallel to server, tested script using wireshark, updated some parameters in vagrantfile
