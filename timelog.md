@@ -87,3 +87,10 @@
 ### 9 Oct 2021
 
 * *3 hours* Fixed bugs in mininet script, updated mininet to use python3, set up script to use threads to connect 3 clients in parallel to server, tested script using wireshark, updated some parameters in vagrantfile
+
+## Week 4
+
+### 13 Oct 2021
+
+* *0.5 hours* Meeting with supervisor
+* *0.5 hours* Aggregated meeting notes
