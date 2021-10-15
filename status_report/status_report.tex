@@ -1,0 +1,110 @@
+\documentclass[11pt]{article}
+\usepackage{times}
+\usepackage{fullpage}
+\usepackage[english]{babel}
+    
+    \title{MQTT over QUIC}
+    \author{Ivan Nikitin - 2292523n}
+
+    \begin{document}
+    \maketitle
+    
+    
+     
+
+\section{Status report}
+
+\subsection{Proposal}\label{proposal}
+
+\subsubsection{Motivation}\label{motivation}
+
+With the number of devices reaching 12 billion in 2020~\cite{noauthor_state_2020}, IoT is becoming the dominant form of computation.
+Despite this, security in IoT devices still leaves much to be desired.
+The inherent hardware constraints and challenges in updatability mean that these devices are susceptible to attacks in the areas of data integrity, privacy, eavesdropping, and more~\cite{alaba_internet_2017}.
+
+MQTT is a widely-used message-passing protocol used for IoT devices.
+It relies on the transport protocol used in its implementation to provide both reliable delivery and security.
+QUIC is a new general-purpose transport layer protocol that is set to improve upon TCP.
+By using QUIC as the transport layer protocol for MQTT we can provide the essential security features, mainly authentication and encryption at packet and header level, needed to secure MQTT.
+
+Securing MQTT via QUIC should, however, not come at a performance overhead compared to current implementations.
+Performance overheads will therefore be addressed by focusing on three major avenues.
+
+Rust is a new systems programming language with type, memory, and concurrency safety guarantees while not impeding performance.
+Evaluating the feasibility of using rust for IoT devices may show that these guarantees do not have to come with substantial overhead, which is crucial for hardware-constrained devices.
+
+Evaluating the approach used to trimm down the QUIC stack as presented by Lars Eggert~\cite{eggert_towards_2020} will be the next avenue for evaluation.
+The reproducability of these methods will show if a general approach to porting transport protocols to hardware-constrained devices is feasible. 
+
+Providing a feature-full alternative to TLS, which comes with major hardware overheads, will also be important to make deploying secure implementations of MQTT feasible.
+The alternative that will be explored in this project will be key-policy attribute-based encryption (KP-ABE) due to the constant computational cost needed to create a ciphertext with respect to the number of attributes~\cite{wang_key-policy_2012}.
+
+\subsubsection{Aims}\label{aims}
+
+The aims for the project will be presented in the form of a MoSCoW analysis.
+
+\subsection*{Must}
+
+Must port an existing MQTT implementation to use a QUIC implementation.
+The implementations chosen will use the Rust programming language as specified in the motivation.
+This will be the foundation for all further analysis, hence is required to be completed.\
+This port will then be evaluated against existing industry-standard MQTT implementations as well as the MQTT using QUIC implementation in C presented by Puneet Kumar~\cite{kumar_implementation_2019}.
+The evaluation will be conducted with respect to binary size, heap and stack allocations as well as latency.
+
+Must analyse authentication and encryption feature fullness of the implementation.
+These factors are the major features that provide a way to secure MQTT.
+Authentication means that non-trusted devices can not simply subscribe to all topics on a given broker to eavesdrop.
+Authentication also limits attack vectors to devices on the same network.
+Encryption of packets and headers also prevents various man in the middle attacks, especially at the stage of authenticating with the broker.
+In combination, these also guarantee data integrity.
+
+\subsection*{Should}
+
+Should evaluate the methods of thinning down the QUIC stack for hardware constrained devices and the reproducibility of these methods.
+As discussed in the motivation this will analyse the feasibility of a general framework to thin down transport protocol implementations for IoT devices.
+This analysis will also be the basis to motivate the need for alternatives to TLS for hardware constrained devices due to its major overhead.
+
+Should evaluate the overhead of TLS and present a comparison to KP-ABE.
+This is important to present a possible solution to the overhead issue while maintaining the security features needed for a secure MQTT implementation.
+It is also a basis for analysing which features of TLS are needed for hardware constrained devices.
+
+\subsection*{Could}
+
+Could extend the QUIC implementation to use a KP-ABE based cypher suite instead of TLS.
+Providing such an extension to QUIC would provide an alternative, thin QUIC stack for hardware constrained devices.
+This however would take a large amount of effort, hence is not higher on the priority scale and may be left as a future extension depending on time constraints.
+
+\subsection*{Won't have this time}
+
+Consider the performance of the resulting implementation in the context of mesh networks.
+QUIC should outperform TCP in congested networks, which leads well to its use in IoT mesh networks.
+Similarly, the security of mesh networks is highly topical, especially in the areas of botnets and device recruitment.
+However, for the scope of this project, the set up of a test bench for a mesh network and the evaluation would take too much time.
+
+\subsection{Progress}\label{progress}
+
+\emph{{[}Briefly state your progress so far, as a bulleted list{]}}
+s   
+\subsection{Problems and risks}\label{problems-and-risks}
+
+\subsubsection{Problems}\label{problems}
+
+\emph{{[}What problems have you had so far, that have held up the
+project?{]}}
+
+\subsubsection{Risks}\label{risks}
+
+\emph{{[}What problems do you foresee in the future and how will you
+mitigate them?{]}}
+
+\subsection{Plan}\label{plan}
+
+\emph{{[}Time plan, in roughly weekly to monthly blocks, up until
+submission week{]}}
+
+\medskip
+\bibliographystyle{acm}
+\bibliography{ref}    
+    
+
+\end{document}
