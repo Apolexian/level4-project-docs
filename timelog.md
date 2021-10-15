@@ -94,3 +94,7 @@
 
 * *0.5 hours* Meeting with supervisor
 * *0.5 hours* Aggregated meeting notes
+
+### 15 Oct 2021
+
+* *2.5 hours* Wrote up the prioritisation and motivation with more discussion from the plan to the status report
