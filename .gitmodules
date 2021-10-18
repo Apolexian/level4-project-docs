@@ -4,3 +4,6 @@
 [submodule "level4-scripts"]
 	path = level4-scripts
 	url = git@github.com:Apolexian/level4-scripts.git
+[submodule "rumqtt"]
+	path = rumqtt
+	url = https://github.com/Apolexian/rumqtt
