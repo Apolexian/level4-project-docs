@@ -98,3 +98,10 @@
 ### 15 Oct 2021
 
 * *2.5 hours* Wrote up the prioritisation and motivation with more discussion from the plan to the status report
+
+### 17 Oct 2021
+
+* *0.5 hours* Researched generating TLS certificates that are needed for mqtt broker example and wrote script to create them
+* *1.5 hours* Modified code from [rumqtt examples](https://github.com/bytebeamio/rumqtt) to run example mqtt client and broker (pre-port version) on local and verified packets via wireshark
+* *1 hours* Changed [quic test code](https://github.com/Apolexian/level4-scripts/blob/master/quic/quic-mininet.py) to use a dumbbell topology and fixed some cmake issues in the vagrantfile
+* *1.5 hours* Made script to run rumqtt broker and server (unported) in mininet using dumbbell topology
