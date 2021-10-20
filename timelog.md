@@ -109,3 +109,10 @@
 ### 18 Oct 2021
 
 * *5 hours* [Started porting the mqtt implementation to use quiche](https://github.com/Apolexian/rumqtt). First time unsuccessful due to not being able to substitute tokio with mio (encountered too many lifetime semantics to get mio UdpSocket to work). Second time used pure tokio and compiled successfully, did not have time to fully test though.
+
+## Week 5
+
+### 20 Oct 2021
+
+* *0.5 hours* Meeting with supervisor
+* *0.5 hours* Aggregated meeting notes
