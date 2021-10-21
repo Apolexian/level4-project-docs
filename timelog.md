@@ -116,3 +116,7 @@
 
 * *0.5 hours* Meeting with supervisor
 * *0.5 hours* Aggregated meeting notes
+
+### 21 Oct 2021
+
+* *1 hours* Started reading interfaces and source code for tokio and underlying mio tcp socket, listener and stream to understand how to create quic counterparts
