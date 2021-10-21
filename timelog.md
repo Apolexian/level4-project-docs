@@ -122,3 +122,4 @@
 * *1 hours* Started reading interfaces and source code for tokio and underlying mio tcp socket, listener and stream to understand how to create quic counterparts
 * *2.5 hours* Added QuicSocket definition and base methods for connecting as well as QuicListener definition
 * *0.5 hours* Moved QuicSocket to its own repo and added some documentation for the methods so far
+* *0.5 hours* Collected questions from previous meeting, formulated them and emailed Mihail
