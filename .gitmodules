@@ -7,3 +7,6 @@
 [submodule "rumqtt"]
 	path = rumqtt
 	url = https://github.com/Apolexian/rumqtt
+[submodule "QuicSocket"]
+	path = QuicSocket
+	url = https://github.com/Apolexian/QuicSocket
