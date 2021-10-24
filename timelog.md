@@ -122,3 +122,8 @@
 * *1 hours* Started reading interfaces and source code for tokio and underlying mio tcp socket, listener and stream to understand how to create quic counterparts
 * *2.5 hours* Added QuicSocket definition and base methods for connecting as well as QuicListener definition
 * *0.5 hours* Moved QuicSocket to its own repo and added some documentation for the methods so far
+
+### 24 Oct 2021
+
+* *2 hours* Added functions for send and recv to [QuicListener](https://github.com/Apolexian/QuicSocket/blob/master/src/lib.rs#L191)
+* *0.5 hours* Published QuicSocket as a crate so I can have an easier time using it in my rumqtt fork
