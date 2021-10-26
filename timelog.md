@@ -132,3 +132,6 @@
 ### 26 Oct 2021
 
 * *3 hours* Changed QuicSocket to auto-configure a quiche config, tried initial port of rumqttd and rumqttc using QuickSocket (connects but errors out when sending), changed mqtt scripts to use ported versions of rumqtt
+* *1 hours* Read [Ofcom report](https://www.ofcom.org.uk/__data/assets/pdf_file/0020/224192/uk-home-broadband-performance-technical-report-march-2021-data.pdf) to check for values I can use for link simulation in mininet. Also read some general articles about packet loss patterns.
+* *0.5 hours* Checked old version of chrome to see what values are used for network speed presets in the network tab
+* *1 hours* Aggregated progress, thoughts and questions for next meeting
