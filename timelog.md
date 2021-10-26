@@ -129,6 +129,8 @@
 * *2 hours* Added functions for send and recv to [QuicListener](https://github.com/Apolexian/QuicSocket/blob/master/src/lib.rs#L191)
 * *0.5 hours* Published QuicSocket as a crate so I can have an easier time using it in my rumqtt fork
 
+## Week 6
+
 ### 26 Oct 2021
 
 * *3 hours* Changed QuicSocket to auto-configure a quiche config, tried initial port of rumqttd and rumqttc using QuickSocket (connects but errors out when sending), changed mqtt scripts to use ported versions of rumqtt
