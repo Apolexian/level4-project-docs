@@ -138,3 +138,8 @@
 * *0.5 hours* Checked old version of chrome to see what values are used for network speed presets in the network tab
 * *1 hours* Aggregated progress, thoughts and questions for next meeting
 * *1 hours* Created minimal example of usage of QuicSocket which can be used to debug it in isolation. Found a bug with the send function
+
+### 27 Oct 2021
+
+* *0.5 hours* Meeting with supervisor
+* *0.5 hours* Aggregated meeting notes
