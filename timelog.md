@@ -149,3 +149,5 @@
 ### 28 Oct 2021
 
 * *2 hours* Fixed QuickListener send and recv functions and modified [test client and server](https://github.com/Apolexian/level4-scripts/tree/master/socket) so sending and receiving actually works now
+* *0.5 hours* Added dissertation template to repo and made a makefile for it
+* *3 hours* Started working on getting port to work, but getting Timeout error. Hard to debug but seems that the timeout is during MQTT connection establishment.
