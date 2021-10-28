@@ -145,3 +145,7 @@
 * *0.5 hours* Aggregated meeting notes
 * *1 hours* Skimmed RFCs 8593 and 8667 and found some relevant test simulation info and topology descriptions. Looked through mininet python API reference and found [link options](https://github.com/mininet/mininet/blob/master/mininet/link.py#L320) in the source code since they are not documented in the reference.
 * *0.5 hours* Emailed author of `Implementation and Analysis of QUIC for MQTT` to ask for source code for the paper and Mihail to ask for report data
+
+### 28 Oct 2021
+
+* *2 hours* Fixed QuickListener send and recv functions and modified [test client and server](https://github.com/Apolexian/level4-scripts/tree/master/socket) so sending and receiving actually works now
