@@ -151,3 +151,8 @@
 * *2 hours* Fixed QuickListener send and recv functions and modified [test client and server](https://github.com/Apolexian/level4-scripts/tree/master/socket) so sending and receiving actually works now
 * *0.5 hours* Added dissertation template to repo and made a makefile for it
 * *3 hours* Started working on getting port to work, but getting Timeout error. Hard to debug but seems that the timeout is during MQTT connection establishment.
+
+### 31 Oct 2021
+
+* *2 hours* Debugged issue with packets and realise that quiche does not handle initial packets and handshake fully when simply establishing connection, so QuicSocket will have to do this (probably on connect/accept). Also realised that buffer was being overwritten because of this.
+* *5.5 hours* Debugged further and understood quiche library more. It does **not** in fact handle handshake nor retry when connecting automatically. Instead you need to keep up the send/recv loop until the handshake is established. For some reason, none of their examples do this nor use a retry token but they work. Got as far as getting Retry packets to work in the eventloop.
