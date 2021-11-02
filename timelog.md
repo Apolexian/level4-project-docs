@@ -163,3 +163,4 @@
 
 * *1 hours* Got QuicSocket to go past Retry packets to Handshake packets but get buffer errors
 * *3 hours* Got handshake to work but it seems that there is an issue with the connection object. Stream send should initialse the stream for the connection, however the connection object is obviously different for server and client in my case which means that the streams never get initialised on server side. This also probably means that the connection will never receive what is sent.
+* *0.5 hours* Wrote [question](https://github.com/cloudflare/quiche/issues/1077) on quiche repo about the issue
