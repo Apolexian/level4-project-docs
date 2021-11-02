@@ -157,6 +157,8 @@
 * *2 hours* Debugged issue with packets and realise that quiche does not handle initial packets and handshake fully when simply establishing connection, so QuicSocket will have to do this (probably on connect/accept). Also realised that buffer was being overwritten because of this.
 * *5.5 hours* Debugged further and understood quiche library more. It does **not** in fact handle handshake nor retry when connecting automatically. Instead you need to keep up the send/recv loop until the handshake is established. For some reason, none of their examples do this nor use a retry token but they work. Got as far as getting Retry packets to work in the eventloop.
 
+## Week 7
+
 ### 2 Nov 2021
 
 * *1 hours* Got QuicSocket to go past Retry packets to Handshake packets but get buffer errors
