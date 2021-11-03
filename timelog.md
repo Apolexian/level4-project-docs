@@ -165,3 +165,9 @@
 * *3 hours* Got handshake to work but it seems that there is an issue with the connection object. Stream send should initialse the stream for the connection, however the connection object is obviously different for server and client in my case which means that the streams never get initialised on server side. This also probably means that the connection will never receive what is sent.
 * *0.5 hours* Wrote [question](https://github.com/cloudflare/quiche/issues/1077) on quiche repo about the issue
 * *0.5 hours* Prep for next meetings
+
+### 3 Nov 2021
+
+* *0.5 hours* Meeting with supervisor
+* *0.5 hours* Aggregated meeting notes
+* *3 hours* Tried to get stream send a recieve working based on answer from @LParude on github. Works better now but I seem to have a bug with polling because running client twice sends data. Asked about it on the same [github issue](https://github.com/cloudflare/quiche/issues/1077)
