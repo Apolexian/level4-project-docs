@@ -171,3 +171,20 @@
 * *0.5 hours* Meeting with supervisor
 * *0.5 hours* Aggregated meeting notes
 * *3 hours* Tried to get stream send a recieve working based on answer from @LParude on github. Works better now but I seem to have a bug with polling because running client twice sends data. Asked about it on the same [github issue](https://github.com/cloudflare/quiche/issues/1077)
+
+## Week 8
+
+### 10 Nov 2021
+
+* *4 hours* Debugging why the eventloop does not trigger in the MQTT implementation
+
+### 11 Nov 2021
+
+* *2 hours* Thinking about possible rescoping strategies in case the MQTT event loop bug can not be solved in time
+* *0.5 hours* Wrote email to supervisor with update on the status of the implementation
+
+## Week 9
+
+### 16 Nov 2021
+
+* *0.5 hours* Prep for next meeting
