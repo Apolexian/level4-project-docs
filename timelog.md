@@ -172,6 +172,10 @@
 * *0.5 hours* Aggregated meeting notes
 * *3 hours* Tried to get stream send a recieve working based on answer from @LParude on github. Works better now but I seem to have a bug with polling because running client twice sends data. Asked about it on the same [github issue](https://github.com/cloudflare/quiche/issues/1077)
 
+### 6 Nov 2021
+
+* *2 hours* Fixed stream send and socket is now able to send, although consecutive sends seems to break. Tried to use this in the MQTT port but it seems that it attempts to send before ever creating a connection which is bizarre.
+
 ## Week 8
 
 ### 10 Nov 2021
