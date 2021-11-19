@@ -192,3 +192,14 @@
 ### 16 Nov 2021
 
 * *0.5 hours* Prep for next meeting
+
+### 17 Nov 2021
+
+* *0.5 hours* Meeting with supervisor
+* *0.5 hours* Aggregated meeting notes
+
+### 19 Nov 2021
+
+* *1 hours* Read into using quiche with tokio and found out that [quiche does not support async](https://github.com/cloudflare/quiche/issues/139) (and is actually built to be called from C) so there are no examples (nor seemingly plans) for it to support tokio
+* *1 hours* Read into how tokio uses mio in its implementation and how I could build a tokio wrapper around quiche. Decided to try to switch implementation to quinn because it seems it would be easier to do.
+* *2 hours* Wrote initial [re-write of the socket library in quinn](https://github.com/Apolexian/QuicSocket/commit/0cb2040ce8941f13515ad19f16c0bd0f1914f31b)
