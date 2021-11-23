@@ -203,3 +203,9 @@
 * *1 hours* Read into using quiche with tokio and found out that [quiche does not support async](https://github.com/cloudflare/quiche/issues/139) (and is actually built to be called from C) so there are no examples (nor seemingly plans) for it to support tokio
 * *1 hours* Read into how tokio uses mio in its implementation and how I could build a tokio wrapper around quiche. Decided to try to switch implementation to quinn because it seems it would be easier to do.
 * *2 hours* Wrote initial [re-write of the socket library in quinn](https://github.com/Apolexian/QuicSocket/commit/0cb2040ce8941f13515ad19f16c0bd0f1914f31b)
+
+### 23 Nov 2021
+
+* *2.5 hours* Debugged new implementation in quinn and tried to test it. Can't seem to generate the right certificates that their example would work with. The [example they provide](https://quinn-rs.github.io/quinn/quinn/certificate.html) for generating certificates is also outdated and does not work.
+* *2 hours* Read into ssl/tls certificates more and the rustls library to try to figure out why the certificates that I am generating do not work with the [quinn example server](https://github.com/quinn-rs/quinn/blob/main/quinn/examples/server.rs).
+* *1 hours* Tried to modify the quinn examples to use pem instead of der but neither work.
