@@ -204,6 +204,8 @@
 * *1 hours* Read into how tokio uses mio in its implementation and how I could build a tokio wrapper around quiche. Decided to try to switch implementation to quinn because it seems it would be easier to do.
 * *2 hours* Wrote initial [re-write of the socket library in quinn](https://github.com/Apolexian/QuicSocket/commit/0cb2040ce8941f13515ad19f16c0bd0f1914f31b)
 
+## Week 10
+
 ### 23 Nov 2021
 
 * *2.5 hours* Debugged new implementation in quinn and tried to test it. Can't seem to generate the right certificates that their example would work with. The [example they provide](https://quinn-rs.github.io/quinn/quinn/certificate.html) for generating certificates is also outdated and does not work.
