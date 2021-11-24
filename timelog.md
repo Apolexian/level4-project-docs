@@ -211,3 +211,8 @@
 * *2.5 hours* Debugged new implementation in quinn and tried to test it. Can't seem to generate the right certificates that their example would work with. The [example they provide](https://quinn-rs.github.io/quinn/quinn/certificate.html) for generating certificates is also outdated and does not work.
 * *2 hours* Read into ssl/tls certificates more and the rustls library to try to figure out why the certificates that I am generating do not work with the [quinn example server](https://github.com/quinn-rs/quinn/blob/main/quinn/examples/server.rs).
 * *1 hours* Tried to modify the quinn examples to use pem instead of der but neither work.
+
+### 24 Nov 2021
+
+* *0.5 hours* Meeting with supervisor
+* *0.5 hours* Aggregated meeting notes
