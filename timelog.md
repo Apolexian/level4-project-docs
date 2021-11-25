@@ -216,3 +216,7 @@
 
 * *0.5 hours* Meeting with supervisor
 * *0.5 hours* Aggregated meeting notes
+
+### 25 Nov 2021
+
+* *1 hours* Debugged the certificate generation further. Decided that I should use rcgen to generate certificates instead of generating them via cli then reading the file. Need to change the code to resemble this.
