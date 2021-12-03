@@ -223,3 +223,19 @@
 * *1 hours* Re-wrote the send and recv functions to not use the tls build steps that quinn example uses and instead use code generated certificates and handshake seems to work now. The server does not receive anything so need to debug this. Additionally, this method means that the cert.der is saved on server load to a file and I have to copy and paste it to the client directory for the crypto to work.
 * *1 hours* Debugged the server hanging. The payload is received correctly in the handler functions but the `handle_connection` function never returns a value, maybe due to async? It's also rather hard to debug because the client times out if I keep the server debugger going for too long.
 * *1 hours* Fixed server hanging issue due to loop behavior. Most of the examples assume the server waits for all connections which is not exactly the case here since I'm trying to use it as a transport for mqtt messages. Had to have a bit of a hacky way to load certificates for the client, when the server loads it generates a certificate for the client and puts it in the path supplied. Could change this later to not generate a new cert every time and just read from a file, but this works for now. I could also need to figure out how to keep the QUIC server running while waiting for more mqtt packets. This would mean that we need to keep the loop going *and* read the thing the client sent, while in all examples we have HTTP so the server simply responds. This can probably be done by having some sort of data structure that we write to and read from to get the current packet, but this would have to be thread-safe.
+
+## Week 11
+
+### 1 Dec 2021
+
+* *0.5 hours* Meeting with supervisor
+* *0.5 hours* Aggregated meeting notes
+
+### 2 Dec 2021
+
+* *1 hours* Read into the code for MQTT more to make sure that I'm not getting rid of more than I need to.
+* *0.5 hours* Chatted with Paul Traynor about the async issues as he is making a service layer for QUIC for his project and also working in quiche.
+
+### 3 Dec 2021
+
+* *2 hours* Tried to migrate the mqtt client to use the new version of quic socket but encountering some problems with the same eventloop as before. Code might be a bit too complex in rumqtt so will read it more to understand the flow.
