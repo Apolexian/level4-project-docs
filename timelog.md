@@ -239,3 +239,17 @@
 ### 3 Dec 2021
 
 * *2 hours* Tried to migrate the mqtt client to use the new version of quic socket but encountering some problems with the same eventloop as before. Code might be a bit too complex in rumqtt so will read it more to understand the flow.
+
+### 4 Dec 2021
+
+* *3 hours* Spent time reading the MQTT code and sketching out what I need to change in the socket library.
+
+## Week 12
+
+### 6 Dec 2021
+
+* *1 hours* Went through the examples for quinn again and decided that I need to split my implementation into a client and server structs with respective send and recv methods. Currently recv means that the library thinks you are a server, which is obviously wrong.
+* *2 hours* Finished initial implementation of the QUIC server and client for the socket.
+* *1 hours* Solved issue with tls certificates not being read from file. It seems that the certificates generated from the CLI were perhaps too short or did not have enough detail? New function in quick socket to generate quinn compliant tls certificates and save them to files. Server and client then read from those files. For now, this is hard coded.
+* *0.5 hours* Ported rumqttc and rumqttd to use the new version of quic socket.
+* *0.5 hours* Fixed some minor bugs in the mqtt code and realised that I need to pass server address when creating the server already instead of hard coding.
