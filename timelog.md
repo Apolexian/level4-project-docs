@@ -253,3 +253,8 @@
 * *1 hours* Solved issue with tls certificates not being read from file. It seems that the certificates generated from the CLI were perhaps too short or did not have enough detail? New function in quick socket to generate quinn compliant tls certificates and save them to files. Server and client then read from those files. For now, this is hard coded.
 * *0.5 hours* Ported rumqttc and rumqttd to use the new version of quic socket.
 * *0.5 hours* Fixed some minor bugs in the mqtt code and realised that I need to pass server address when creating the server already instead of hard coding.
+
+### 7 Dec 2021
+
+* *2 hours* Read more into the rumqtt API and mqtt spec to see what the handling of packets flow is.
+* *1 hours* Prep for next meeting
