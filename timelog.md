@@ -257,4 +257,18 @@
 ### 7 Dec 2021
 
 * *2 hours* Read more into the rumqtt API and mqtt spec to see what the handling of packets flow is.
-* *1 hours* Prep for next meeting
+* *1 hours* Prep for next meeting.
+
+### 8 Dec 2021
+
+* *0.5 hours* Meeting with supervisor.
+* *0.5 hours* Aggregated meeting notes.
+* *2.5 hours* Fixing minor bugs in send method of quic implementation.
+
+## Week 13
+
+### 14 Dec 2021
+
+* *1.5 hours* Wrote up the status report.
+* *3 hours* Tried to get mqtt implementation working but encountered problem with not knowing how to make broker know where to send a response.
+ 

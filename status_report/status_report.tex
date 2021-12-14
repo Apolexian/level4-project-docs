@@ -43,7 +43,7 @@ The alternative that will be explored in this project will be key-policy attribu
 
 The aims for the project will be presented in the form of a MoSCoW analysis.
 
-\subsection*{Must}
+\subsubsection*{Must}
 
 Must port an existing MQTT implementation to use a QUIC implementation.
 The implementations chosen will use the Rust programming language as specified in the motivation.
@@ -58,7 +58,7 @@ Authentication also limits attack vectors to devices on the same network.
 Encryption of packets and headers also prevents various man in the middle attacks, especially at the stage of authenticating with the broker.
 In combination, these also guarantee data integrity.
 
-\subsection*{Should}
+\subsubsection*{Should}
 
 Should evaluate the methods of thinning down the QUIC stack for hardware constrained devices and the reproducibility of these methods.
 As discussed in the motivation this will analyse the feasibility of a general framework to thin down transport protocol implementations for IoT devices.
@@ -68,13 +68,13 @@ Should evaluate the overhead of TLS and present a comparison to KP-ABE.
 This is important to present a possible solution to the overhead issue while maintaining the security features needed for a secure MQTT implementation.
 It is also a basis for analysing which features of TLS are needed for hardware constrained devices.
 
-\subsection*{Could}
+\subsubsection*{Could}
 
 Could extend the QUIC implementation to use a KP-ABE based cypher suite instead of TLS.
 Providing such an extension to QUIC would provide an alternative, thin QUIC stack for hardware constrained devices.
 This however would take a large amount of effort, hence is not higher on the priority scale and may be left as a future extension depending on time constraints.
 
-\subsection*{Won't have this time}
+\subsubsection*{Won't have this time}
 
 Consider the performance of the resulting implementation in the context of mesh networks.
 QUIC should outperform TCP in congested networks, which leads well to its use in IoT mesh networks.
@@ -83,24 +83,42 @@ However, for the scope of this project, the set up of a test bench for a mesh ne
 
 \subsection{Progress}\label{progress}
 
-\emph{{[}Briefly state your progress so far, as a bulleted list{]}}
-s   
+The first semester of the project was spent on a short literature review and planning section, setting up a test-bench using mininet and vagrant, and on the mqtt port.
+The test-bench is ready for evaluation with both QUIC and MQTT tested on the vagrant VM.
+The MQTT port required a service layer API for an existing QUIC implementation to be created.
+Initially, quiche was used for this, however there were complications due to the library not supporting async.
+Hence, this was switched to quinn, a tokio based QUIC implementation.
+The resulting implementation uses quinn to send and receive QUIC packets and seems to work correctly.
+The MQTT port has a rather complicated code base and has proved a little challenging to port using the QUIC implementation.
+At the start of writing there are still some bugs in the sending process, however I expect this to be completed over the christmas break.
+
 \subsection{Problems and risks}\label{problems-and-risks}
 
 \subsubsection{Problems}\label{problems}
 
-\emph{{[}What problems have you had so far, that have held up the
-project?{]}}
+The problems encountered so far have largely been in the use of the QUIC and MQTT implementations.
+The TLS certificate generation example for quinn did not work out of the box and had to be altered.
+There are no hard blocking problems, however a lot of the work is an exercise in finding small bugs with little documentation.
 
 \subsubsection{Risks}\label{risks}
 
-\emph{{[}What problems do you foresee in the future and how will you
-mitigate them?{]}}
+Problems in the future can arise from the same sources as this semester.
+That is, some of the implementations can again prove challenging, however I expect that this can largely be addressed over the holiday break by dedicating a lot of time to debugging.
+Alternatively, in the worst case scenario, a re-scoping to just QUIC has been discussed as the QUIC part of the project already works.
+In this case, any time in the following plan that is dedicated to MQTT will be instead be used for further work on the KP-ABE parts of the project.
+
+Any potential problems with getting the evaluation setup on devices has already been circumvented by using a mininet test-bed.
 
 \subsection{Plan}\label{plan}
 
-\emph{{[}Time plan, in roughly weekly to monthly blocks, up until
-submission week{]}}
+The holiday break will be spent on fixing the remaining bugs in the MQTT port and getting it to the stage where it can be evaluated.
+Additionally, the evaluation of the QUIC implementation and the potential ways to decrease the size of the binary will also be done during this time.
+The background research of KP-ABE and existing implementations of libraries for this in rust will also be done during this time.
+Week 17 will be spent on the evaluation and analysis of the MQTT implementation.
+Weeks 18 to 20 will be spent on analysing the key features of TLS and comparing this to what can be provided by KP-ABE.
+Weeks 21 to 23 will be spent on getting the QUIC implementation to work with KP-ABE and analysing the size of teh resulting binaries. 
+If this is not managebale to an extent where the analysis is possible then this time will instead be spent analysing what it would take to switch away from TLS for IoT.
+Finally, weeks 24 to 27 will be spent on writing the dissertation and getting feedback on it to improve it incrementally.
 
 \medskip
 \bibliographystyle{acm}
