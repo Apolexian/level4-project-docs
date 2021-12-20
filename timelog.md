@@ -272,3 +272,21 @@
 * *1.5 hours* Wrote up the status report.
 * *3 hours* Tried to get mqtt implementation working but encountered problem with not knowing how to make broker know where to send a response.
  
+ ### 15 Dec 2021
+
+* *0.5 hours* Meeting with supervisor.
+* *0.5 hours* Aggregated meeting notes.
+
+### 16 Dec 2021
+
+* *3 hours* More work on mqtt but still encountering both eventloop and other minor issues. May put a pause on this to save some sanity.
+
+### 19 Dec 2021
+
+* *2 hours* Read about way to analyse binary sizes. Found [google's](https://github.com/google/bloaty) that I can use for ngtcp2, since the example server and client are in cpp. [Cargo bloat](https://github.com/RazrFalcon/cargo-bloat) seems to be the equivalent for rust.
+
+## Week 14
+
+### 20 Dec 2021
+
+* *3 hours* Created examples for quiche and quinn in stand-alone cargo binaries in order to be able to analyse them using cargo bloat. Compiled ngtcp2 and used bloaty to analyse that. Also took a look at [mvfst](https://github.com/facebookincubator/mvfst) however this one bundles together client and server, and the binary is unreasonable large compared to ngtcp2. Its hard to find exactly how large the tls component is for quiche because it has its own tls implementation, so on cargo bloat it just shows up as part of the quiche dependency. To get an approximation i've compared how large the source code files are and will create a mock binary that uses all the dependencies that their TLS implementation uses and see how large that is. Same for ngtcp2 that requires some sort of backend to exist, for me this is openssl. I can probably somehow find how large an openssl binary is. For the analysis part of the dissertation I can probably discuss this and just analyse quinn that uses rustls, since this is actually measurable. Also, useful link: <https://en.wikipedia.org/w/index.php?title=Comparison_of_TLS_implementations&oldid=585386367#Code_size_and_dependencies>.
