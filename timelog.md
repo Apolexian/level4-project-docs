@@ -290,3 +290,10 @@
 ### 20 Dec 2021
 
 * *3 hours* Created examples for quiche and quinn in stand-alone cargo binaries in order to be able to analyse them using cargo bloat. Compiled ngtcp2 and used bloaty to analyse that. Also took a look at [mvfst](https://github.com/facebookincubator/mvfst) however this one bundles together client and server, and the binary is unreasonable large compared to ngtcp2. Its hard to find exactly how large the tls component is for quiche because it has its own tls implementation, so on cargo bloat it just shows up as part of the quiche dependency. To get an approximation i've compared how large the source code files are and will create a mock binary that uses all the dependencies that their TLS implementation uses and see how large that is. Same for ngtcp2 that requires some sort of backend to exist, for me this is openssl. I can probably somehow find how large an openssl binary is. For the analysis part of the dissertation I can probably discuss this and just analyse quinn that uses rustls, since this is actually measurable. Also, useful link: <https://en.wikipedia.org/w/index.php?title=Comparison_of_TLS_implementations&oldid=585386367#Code_size_and_dependencies>.
+
+* *3 hours* Went through the dissertation writing guidance on moodle and in the template and adjusted the template sections to be in different files.
+
+### 21 Dec 2021
+
+* *4 hours* Wrote the transport layer background section for the dissertation.
+* *3 hours* Wrote up the IoT background section for the dissertation.
