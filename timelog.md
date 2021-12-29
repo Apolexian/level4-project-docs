@@ -297,3 +297,26 @@
 
 * *4 hours* Wrote the transport layer background section for the dissertation.
 * *3 hours* Wrote up the IoT background section for the dissertation.
+
+### 22 Dec 2021
+
+* *4 hours* Wrote up the rust background section for the dissertation.
+
+### 23 Dec 2021
+
+* *4 hours* Restructured parts of the presentation and skimmed through a few of the hall of fames ones to get an idea of how a more research based project can be structured. 
+* *2.5 hours* Started writing the network simulation part of the dissertation (describing how the analysis was done using mininet)
+
+## Week 15
+
+### 28 Dec 2021
+
+* *1 hours* Finished the network simulation section for the dissertation.
+* *2 hours* Rethought the way that connection establishment works for quic socket. Stream should be opened in new method.
+
+### 29 Dec 2021
+
+* *1 hours* Re-wrote parts of quic-socket to establish connection and open bidirectional stream in new method. Altered examples to test this.
+* *1 hours* Finished new quic-socket implementation and tested it using the quic socket examples. The client and server can now send and receive arbitrary payloads on new streams and there seems to be no hanging and packets arrive fine.
+* *3 hours* Debugging invalid packets in mqtt and trying to get it to work. Currently I manage to get the initial connection ACK only, so packets get corrupted somewhere after that.
+* *1 hours* Found bug - was reading more bytes than necessary from buffer. MQTT seems to work now with QUIC but using threads makes some messages lost (around 9 out of 100).
