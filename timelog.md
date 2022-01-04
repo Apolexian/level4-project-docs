@@ -320,3 +320,9 @@
 * *1 hours* Finished new quic-socket implementation and tested it using the quic socket examples. The client and server can now send and receive arbitrary payloads on new streams and there seems to be no hanging and packets arrive fine.
 * *3 hours* Debugging invalid packets in mqtt and trying to get it to work. Currently I manage to get the initial connection ACK only, so packets get corrupted somewhere after that.
 * *1 hours* Found bug - was reading more bytes than necessary from buffer. MQTT seems to work now with QUIC but using threads makes some messages lost (around 9 out of 100).
+
+## Week 16
+
+### 4 Jan 2022
+
+* *5 hours* Wrote the mqtt background section and started the analysis of QUIC implementations. Got the binary sizes for most of the ones I need but having trouble compiling [msquic](https://github.com/microsoft/msquic).
