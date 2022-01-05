@@ -323,6 +323,12 @@
 
 ## Week 16
 
-### 4 Jan 2022
+### 3 Jan 2022
 
 * *5 hours* Wrote the mqtt background section and started the analysis of QUIC implementations. Got the binary sizes for most of the ones I need but having trouble compiling [msquic](https://github.com/microsoft/msquic).
+
+### 4 Jan 2022
+
+* *1 hours* Wrote the start of the analysis of the quic implementation.
+* *1 hours* Had to rethink the dissertation structure because it did not really flow well.
+* *2 hours* Got msquic to compile and got the binary size numbers for it, added to the corresponding section.
