@@ -332,3 +332,8 @@
 * *1 hours* Wrote the start of the analysis of the quic implementation.
 * *1 hours* Had to rethink the dissertation structure because it did not really flow well.
 * *2 hours* Got msquic to compile and got the binary size numbers for it, added to the corresponding section.
+
+### 6 Jan 2022
+
+* *3 hours* Edited what I have so far in the dissertation to see if the flow makes sense.
+* *1 hours* Wrote the draft for the QuicSocket dissertation section.
