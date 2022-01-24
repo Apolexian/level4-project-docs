@@ -337,3 +337,31 @@
 
 * *3 hours* Edited what I have so far in the dissertation to see if the flow makes sense.
 * *1 hours* Wrote the draft for the QuicSocket dissertation section.
+
+## Week 17
+
+### 12 Jan 2022
+
+* *0.5 hours* Meeting with supervisor.
+* *0.5 hours* Aggregated meeting notes.
+
+### 14 Jan 2022
+
+* *4 hours* Researched different tools for binary size analysis and read the docs for tcpdump.
+
+## Week 18
+
+### 19 Jan 2022
+
+* *0.5 hours* Meeting with supervisor.
+* *0.5 hours* Aggregated meeting notes.
+
+### 20 Jan 2022
+
+* *3 hours* Further reading into bloaty and its rust equivalent. Also read about the freebsd ELF binary analysis tool.
+
+## Week 19
+
+### 24 Jan 2022
+
+* *1.5 hours* Wrote up the analysis plan.
