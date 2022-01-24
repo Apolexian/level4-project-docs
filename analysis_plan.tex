@@ -1,0 +1,78 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[style=ACM-Reference-Format,backend=bibtex]{biblatex}
+\addbibresource{ref.bib}
+%Includes "References" in the table of contents
+\usepackage[nottoc]{tocbibind}
+\usepackage[cm]{fullpage}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\usepackage{graphicx}
+\graphicspath{ {./assets/} }
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+\title{Analysis Plan}
+
+\begin{document}
+
+\maketitle
+
+\section*{QUIC implementations}
+
+\begin{itemize}
+    \item Binary sizes
+        \begin{itemize}
+            \item \textbf{What}: Find the binary sizes of selected QUIC implementations and any hard dependencies they require.
+            \item \textbf{Why}: To see if the implementations differ drastically. This is an important metric for hardware constrained devices and if some implementations are a magnitude smaller than others, then they could be a better choice.
+            \item \textbf{How}: First implement basic QUIC server and client in all implementations, each with the same minimal functionality. Compile the examples then find the hard dependencies (OpenSSL, etc) that each requires and also compile these. Measure the size of the dependencies and QUIC binaries using $ls$.
+            \item \textbf{Important for dissertation}: The methodology has to be described thoroughly as it is not possible to give accurate error margins on binary sizes. From preliminary investigation, C binaries seem to be consistently smaller, which may indicate that C is better suited for hardware constraints. However, this can also mean that the methodology missed something. Room for visualisations.
+        \end{itemize}
+    \item Further binary size breakdown
+        \begin{itemize}
+            \item \textbf{What}: Analyse the binary composition of the chosen QUIC implementation. Possibly also do this for other QUIC implementations as a point of comparison.
+            \item \textbf{Why}: By finding what contributes to the binary size of QUIC we will be able to derive an approach to trimming down the binary size (removing debug flags, print statements, etc). We will also identify the contribution of TLS to the binary size.
+            \item \textbf{How}: Use tools such as bloaty/rust-bloaty to show the linked libraries. Other than that, an option is to create a script that automatically uses tools for an analysis of dynamically linked libraries, essentially a small decompiler. The decompiler would be nice for the dissertation, but may not be feasible in the time.
+            \item \textbf{Important for dissertation}: Again, leverage visualisations. Have to explain that the tools have some error margin. This can perhaps be calculated by comparing the \textit{total} binary size given by the tool versus $ls$. For external TLS, we can incorporate this into the visualisation as long as the methodolgoy is clear. It is important to highlight the size of TLS here.
+        \end{itemize}
+    \item Performance of implementations
+        \begin{itemize}
+            \item \textbf{What}: A performance comparison of the QUIC implementations in terms of latency of delivering the same data on various links.
+            \item \textbf{Why}: As a comparison of QUIC implementation performances against each other is not \textit{directly} important for an analysis of QUIC for IoT (compared to for example, a comparison of QUIC versus TCP), this can be left as a possible add-on.
+            \item \textbf{How}: I have already implemented a test bench in mininet using a dumbbell topology. I have also already collected the parameters needed for various links. Hence, this should just require some test data and a way to measure RTT. We could also just use $iperf$ for this stage.
+            \item \textbf{Important for dissertation}: Would have to highlight the methdology here in detail. Room for visualisations.
+        \end{itemize}
+\end{itemize}
+
+\subsection*{MQTT/QUIC}
+
+\begin{itemize}
+    \item Connection time improvement on TCP
+    \begin{itemize}
+        \item \textbf{What}: A measure of the time it takes for MQTT/QUIC to connect versus the original MQTT/TCP implementation.
+        \item \textbf{Why}: The reduced handshake complexity should make MQTT/QUIC establish the initial, secure connect quicker than MQTT/TCP. This is a clear advantage talking point for using QUIC with MQTT.
+        \item \textbf{How}: Using $tcpdump$ we can identify which packets are connection establishment packets and extract them. From this point it is rather trivial to get the connection time.
+        \item \textbf{Important for dissertation}: Important to re-explain why QUIC should establish connection faster. Could also discuss 0-RTT in more detail. Room for visualisations.
+    \end{itemize}
+    \item Header and packet level encryption
+    \begin{itemize}
+        \item \textbf{What}: Show that MQTT/QUIC has default encryption at all stages, hence, it is not possible to perform some attacks (e.g. initial credential read) that is possible with MQTT/TCP.
+        \item \textbf{Why}: This is again a possible clear advantage of MQTT/QUIC, hence a good point of discussion.
+        \item \textbf{How}: We could again use $tcpdump$ here to read the payload of packets and demonstrate an example of such an attack.
+        \item \textbf{Important for dissertation}: The methodology here is important to describe in detail. Also important to describe what the potential consequences of such attacks are. Explain how QUIC prevents this by design.
+    \end{itemize}
+    \item Performance comparison of MQTT/QUIC vs MQTT/TCP
+    \begin{itemize}
+        \item \textbf{What}: Using some representative MQTT data, measure the RTT for a message to get published, delivered to a broker, and sent to subscribers of the topic.
+        \item \textbf{Why}: It is possible that in a scenario with common packet loss, removing head of line blocking will make MQTT/QUIC more performant. It is also important to show that in a normal scenario MQTT/QUIC is at least as performance as MQTT/TCP (to some margin), otherwise there is a disadvantage to using it.
+        \item \textbf{How}: I have already identified a scenario (smart home) that can be used to model MQTT messages around. Here we can again leverage a tool like $wireshark$ or $tcpdump$ to measure the RTT, making sure to capture the correct segments.
+        \item \textbf{Important for dissertation}: The MQTT messages can be provided in an appendix. A thorough description of methodology is important. Room for visualisations.
+    \end{itemize}
+\end{itemize}
+
+Further sections of the dissertation will discuss the feature set of TLS and potential replacements for it in hardware constrained devices.
+
+\medskip
+\nocite{*}
+\printbibliography
+\end{document}
