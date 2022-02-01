@@ -365,3 +365,25 @@
 ### 24 Jan 2022
 
 * *1.5 hours* Wrote up the analysis plan.
+
+### 25 Jan 2022
+
+* *2 hours* Meeting prep and going over analysis plan.
+
+### 26 Jan 2022
+
+* *0.5 hours* Meeting with supervisor.
+* *0.5 hours* Aggregated meeting notes.
+
+## Week 20
+
+### 31 Jan 2022
+
+* *3 hours* Read into examples of smart factories using IoT to come up with a representative topology. In the end decided to settle for a 3d printer farm as its something I have a little bit of experience in.
+* *1 hours* Read into MQTT use in 3d printer farms, but didnt find any papers, just blogs with not so useful info.
+
+### 1 Feb 2022
+
+* *1 hours* Created an example topic and messages that will be used for the mqtt testing.
+* *1 hours* Extracted the base mqtt script needed to run mqtt for both client and broker.
+* *1 hours* More trying to get tcpdump to work within mininet.
