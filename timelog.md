@@ -387,3 +387,4 @@
 * *1 hours* Created an example topic and messages that will be used for the mqtt testing.
 * *1 hours* Extracted the base mqtt script needed to run mqtt for both client and broker.
 * *1 hours* More trying to get tcpdump to work within mininet.
+* *2 hours* Debugged mininet topology making hosts unreachable, it seems that mininet can not handle circular topologies well.
