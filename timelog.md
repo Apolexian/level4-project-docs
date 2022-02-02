@@ -388,3 +388,7 @@
 * *1 hours* Extracted the base mqtt script needed to run mqtt for both client and broker.
 * *1 hours* More trying to get tcpdump to work within mininet.
 * *2 hours* Debugged mininet topology making hosts unreachable, it seems that mininet can not handle circular topologies well.
+
+### 2 Feb 2021
+
+* *2 hours* Recorded data for the base rumqtt TCP implementation using tcpdump and created a filtering script for the dump data.
