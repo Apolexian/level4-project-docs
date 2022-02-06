@@ -402,3 +402,7 @@
 ### 5 Feb 2022
 
 * *6 hours* Wrote up remaining sections of the diss to see how it will flow, leaving results and conclusion blank.
+
+### 6 Feb 2022
+
+* *2 hours* Debugged hostnames not working in mininet. Currently trying to use the hostnames supplied by mininet, but these are likely not DNS resolvable.
