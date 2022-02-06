@@ -392,3 +392,13 @@
 ### 2 Feb 2022
 
 * *2 hours* Recorded data for the base rumqtt TCP implementation using tcpdump and created a filtering script for the dump data.
+* *0.5 hours* Meeting with supervisor.
+* *0.5 hours* Aggregated meeting notes.
+  
+### 3 Feb 2022
+
+* *1.5 hours* Re-wrote parts of the network sim chapter in the dissertation to reflect new scenarios and topology.
+
+### 5 Feb 2022
+
+* *6 hours* Wrote up remaining sections of the diss to see how it will flow, leaving results and conclusion blank.
