@@ -406,3 +406,55 @@
 ### 6 Feb 2022
 
 * *2 hours* Debugged hostnames not working in mininet. Currently trying to use the hostnames supplied by mininet, but these are likely not DNS resolvable.
+
+## Week 21
+
+### 7 Feb 2022
+
+* *2 hours* Some more mininet debugging.
+
+### 9 Feb 2022
+
+* *0.5 hours* Meeting with supervisor.
+* *0.5 hours* Aggregated meeting notes.
+
+### 10 Feb 2022
+
+* *3 hours* Did some binary size analysis, plots and write up.
+
+## Week 22
+
+### 16 Feb 2022
+
+* *0.5 hours* Meeting with supervisor.
+* *0.5 hours* Aggregated meeting notes.
+
+### 17 Feb 2022
+
+* *4 hours* Tried to debug mininet using /etc/resolv.conf and ifconfig.
+
+### 18 Feb 2022
+
+* *3 hours* Re-wrote parts of the dissertation to better formulate the problem statement.
+
+## Week 23
+
+### 23 Feb 2022
+
+* *0.5 hours* Meeting with supervisor.
+* *0.5 hours* Aggregated meeting notes.
+
+### 27 Feb 2022
+
+* *6 hours* Added another background section to the dissertation covering other hardware constrained protocols. Also did some flow re-writing.
+
+## Week 24
+
+### 2 Mar 2022
+
+* *2 hours* Fixed mininet by some pseudo magical combination of adding random things to /etc/hosts resolv.conf and ifconfig commands.
+* *5 hours* Did data gathering for connection time and transmission of messages.
+
+### 3 Mar 2022
+
+* *3 hours* Did plots for gathered data and wrote up connection analysis for the dissertation.
