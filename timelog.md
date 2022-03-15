@@ -454,7 +454,38 @@
 
 * *2 hours* Fixed mininet by some pseudo magical combination of adding random things to /etc/hosts resolv.conf and ifconfig commands.
 * *5 hours* Did data gathering for connection time and transmission of messages.
+* *0.5 hours* Meeting with supervisor.
+* *0.5 hours* Aggregated meeting notes.
 
 ### 3 Mar 2022
 
 * *3 hours* Did plots for gathered data and wrote up connection analysis for the dissertation.
+
+### 4 Mar 2022
+
+* *2 hours* Data collection for binary size breakdowns.
+
+### 5 Mar 2022
+
+* *3 hours* Reading about TLS features to be able to connect functions to them.
+
+## Week 25
+
+### 9 Mar 2022
+
+* *0.5 hours* Meeting with supervisor.
+* *0.5 hours* Aggregated meeting notes.
+
+### 11 Mar 2022
+
+* *7 hours* Making plots for connection time and transmission times. Figuring out what the boxplots of data show. Writing up some analysis
+
+## Week 26
+
+### 14 Mar 2022
+
+* *5 hours* Data analysis on the binary sizes. Matching Quinn and Rustls functions to features.
+
+### 15 Mar 2022
+
+* *6 hours* Writing up the first draft of the dissertation, going through it and making sure it flows-ish.
