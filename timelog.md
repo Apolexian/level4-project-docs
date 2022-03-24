@@ -489,3 +489,23 @@
 ### 15 Mar 2022
 
 * *6 hours* Writing up the first draft of the dissertation, going through it and making sure it flows-ish.
+
+### 16 Mar 2022
+
+* *3 hours* Going over draft and making minor corrections
+
+## Week 27
+
+### 21 Mar 2022
+
+* *3 hours* started making the presentation
+
+### 22 Mar 2022
+
+* *5 hours* finished presentation and recorded it
+
+### 23 Mar 2022
+
+* *2 hours* going through the submission instructions and the master template to figure out what needs to be submitted and where
+* *3 hours* making changes to the code and general clean-up of source files
+* *2 hours* assembling source files for submission
