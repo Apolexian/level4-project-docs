@@ -509,3 +509,7 @@
 * *2 hours* going through the submission instructions and the master template to figure out what needs to be submitted and where
 * *3 hours* making changes to the code and general clean-up of source files
 * *2 hours* assembling source files for submission
+
+### 27 Mar 2022
+
+* *10 hours* Going through the dissertation, expanding upon reqs and design, changing plot colours, fixing typos, adding TLS function to implementation
