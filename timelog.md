@@ -513,3 +513,11 @@
 ### 27 Mar 2022
 
 * *10 hours* Going through the dissertation, expanding upon reqs and design, changing plot colours, fixing typos, adding TLS function to implementation
+
+## Week 28
+
+### 30 Mar 2022
+
+* *0.5 hours* Supervisor meeting
+* *2 hours* Getting box plots to be smaller, adding high-level to reqs.
+* *5 hours* Checking everything for typos and assembling final submission files.
